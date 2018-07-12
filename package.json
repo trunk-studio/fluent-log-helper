@@ -1,0 +1,23 @@
+{
+  "name": "fluent-log-helper",
+  "version": "0.1.0",
+  "main": "index.js",
+  "description": "",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "config": "^1.28.1",
+    "jest-cli": "^21.2.0",
+    "superagent": "^3.8.2"
+  },
+  "dependencies": {
+    "config": "^1.28.1",
+    "jest-cli": "^21.2.0",
+    "node-fetch": "^2.1.2"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "test": "jest __tests__"
+  }
+}
