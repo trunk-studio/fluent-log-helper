@@ -4,14 +4,10 @@
   "main": "index.js",
   "description": "",
   "devDependencies": {
-    "babel-core": "^6.26.0",
     "config": "^1.28.1",
-    "jest-cli": "^21.2.0",
-    "superagent": "^3.8.2"
+    "jest-cli": "^21.2.0"
   },
   "dependencies": {
-    "config": "^1.28.1",
-    "jest-cli": "^21.2.0",
     "node-fetch": "^2.1.2"
   },
   "engines": {
