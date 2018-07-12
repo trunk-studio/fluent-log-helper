@@ -11,17 +11,17 @@ class FluentLogHelper {
 
     }
     async log(content, label) {
-
+        let params = {};
         try {
             if (!label) label = "log";
-            let params = {};
+            
             let {host, port, tag_prefix} = this.config;
             if (typeof content === 'string' || content instanceof String) {
                 params.content = content;
             } else params = content;
 
             let url = `http://${host}:${port}/${tag_prefix}.${label}`;
-            console.log(url);
+
             await fetch(url, {
                 method: 'post',
                 headers: {
@@ -31,7 +31,9 @@ class FluentLogHelper {
             });
             
         } catch (error) {
-            console.error(error);
+            console.error("cannot reach Fluentd server", error.message);
+            if (console[label] != null) console[label](params);
+            else console.log(params);
         }
 
     }

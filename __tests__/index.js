@@ -31,3 +31,15 @@ test('set log object to fluentd server with tag: "info"', () => {
   fluentLogHelper.log({action, user}, "info");
 
 }, 50000);
+
+
+test('set log object to fluentd wrong port', () => {
+  let constructorParams = {
+    host, port: "12345", tag_prefix
+  }
+
+  let testFluentLogHelper = new FluentLogHelper(constructorParams);
+  testFluentLogHelper.log("test error", "info");
+
+
+}, 50000);

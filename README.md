@@ -24,9 +24,6 @@ fluentLogHelper.log({action, user}, "info");
 
 ```
 
-npm install
-
-
 ```
 npm install trunk-studio/fluent-log-helper
 ```
