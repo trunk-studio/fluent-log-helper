@@ -24,3 +24,10 @@ test('set log object to fluentd server', () => {
   fluentLogHelper.log({action, user});
 
 }, 50000);
+
+test('set log object to fluentd server with tag: "info"', () => {
+  let action = "test";
+  let user = 12345;
+  fluentLogHelper.log({action, user}, "info");
+
+}, 50000);

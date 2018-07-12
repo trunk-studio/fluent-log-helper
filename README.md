@@ -3,11 +3,6 @@
 sample
 
 ```
-let {host, port, tag_prefix} = config
-
-
-
-
 let fluentLogHelper = new FluentLogHelper({
     host: "localhost",
     port: "24224",
@@ -15,12 +10,17 @@ let fluentLogHelper = new FluentLogHelper({
 });
 
 // for string
+// without define tag name, default is: "log"
 fluentLogHelper.log("test string log");
 
 // for object
+// without define tag name, default is: "log"
 let action = "test";
 let user = 12345;
 fluentLogHelper.log({action, user});
+
+// specific tag name: "info"
+fluentLogHelper.log({action, user}, "info");
 
 ```
 
