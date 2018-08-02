@@ -31,7 +31,7 @@ class FluentLogHelper {
             });
             
         } catch (error) {
-            console.error("cannot reach Fluentd server", error.message);
+            console.error("error send log to Fluentd server", error.message);
             if (console[label] != null) console[label](params);
             else console.log(params);
         }
