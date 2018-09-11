@@ -19,8 +19,9 @@ class FluentLogHelper {
             if (typeof content === 'string' || content instanceof String) {
                 params.content = content;
             } else params = content;
-
-            let url = `http://${host}:${port}/${tag_prefix}.${label}`;
+            let protocol = "http";
+            if (port == 443) protocol = "https";
+            let url = `${protocol}://${host}:${port}/${tag_prefix}.${label}`;
 
             await fetch(url, {
                 method: 'post',
